@@ -2,3 +2,63 @@
 font-family: 'Open Sans', sans-serif;
 font-family: 'Montserrat', sans-serif;
 */
+
+.font-0{
+    font-size: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+#header{
+    background: url('../images/banner.jpg') bottom center no-repeat #003777;
+    border-top:  solid 10px #0051ad;
+    height: 780px;
+}
+
+#logo{
+    width: 210px;
+    height: 195px;
+    background: #fff;
+}
+
+.navbar-default{
+    background: transparent;
+    border: none;
+    padding-top: 35px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding-bottom: 3px;
+    font-size: 1em;
+    color: #fff;
+    border-bottom: solid 2px transparent;
+}
+
+
+.navbar-default .navbar-nav > li > a:hover {
+    transition: .2s linear;
+    color:  #fff;
+    border-bottom: solid 2px #fff
+}
+
+.navbar-nav{
+    float: right
+}
+
+
+.blocos{
+    float: left;
+    margin-right: 90px;
+}
+
+.blocos:last-child{
+        margin-right: 0px;
+}
+
+#box-blocks{
+    background: url('../images/bg-blocos.jpg')  50px center no-repeat
+}
