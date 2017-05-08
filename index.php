@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="<?php echo URL; ?>/assets/css/animate.css">
         <link rel="stylesheet" href="<?php echo URL; ?>/assets/css/bootstrap.css">
         <link rel="stylesheet" href="<?php echo URL; ?>/assets/css/style.css">
+        <script src="<?php echo URL; ?>assets/js/modernizr.custom.97074.js"></script>
     </head>
     <body>
          <h1 class="font-0">
@@ -113,11 +114,182 @@
                 </div>
             </article>
         </div>
+        <section class="container">
+            <h1 class="font-0">Aleixo Transportes</h1>
+            <div class="row">
+                <div class="block-image">
+                    <div class="circle"><img src="<?php echo URL; ?>/assets/svg/economia.svg" alt="Economia" title="Economia" /></div>
+                    <h2>Economia</h2>
+                    <p>Nossa forma de atuação reduz seus custos com transporte de cargas.</p>
+                </div>
+                <div class="block-image">
+                    <div class="circle"><img src="<?php echo URL; ?>/assets/svg/agilidade.svg" alt="Agilidade"  title="Agilidade" /></div>
+                    <h2>Agilidade</h2>
+                    <p>Enviamos um veículo dedicado para melhor te atender a suas necessidades.</p>
+                </div>
+                <div class="block-image">
+                    <div class="circle"><img src="<?php echo URL; ?>/assets/svg/seguranca.svg" alt="Segurança" title="Segurança" /></div>
+                    <h2>Segurança</h2>
+                    <p>Temos seguro de carga e gerenciamento de risco.</p>
+                </div>
+                <div class="block-image">
+                    <div class="circle"><img src="<?php echo URL; ?>/assets/svg/tecnologia.svg" alt="Tecnologia" title="Tecnologia" /></div>
+                    <h2>Tecnologia</h2>
+                    <p>Aplicamos o uso de tecnologia para otimizar processo e custo</p>
+                </div>
+            </div>
+        </section>
+        <div class="container-fluid bg-gray" id="orcamento">
+            <article class="container">
+                <div class="row">
+                            <h1 class="text-uppercase text-center title">Solicite Um Orçamento</h1>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <form action="">
+
+                                     <div class="form-group"><label for="nome">Nome</label><input type="text" class="form-control" placeholder="Nome" required /></div>
+
+
+                                     <div class="form-group"><label for="empresa">Empresa</label><input type="text" class="form-control" placeholder="Empresa" required /></div>
+
+
+                                     <div class="form-group"><label for="email">E-mail</label><input type="email" class="form-control" placeholder="email@email.com.br" required /></div>
+
+
+                                     <div class="form-group"><label for="telefone">Telefone</label><input type="text" class="form-control" placeholder="(11) 1111-1111" required /></div>
+
+
+                                     <div class="form-group"><label for="origem">Cidade origem</label><input type="text" class="form-control" placeholder="Cidade origem" required /></div>
+
+
+                                     <div class="form-group"><label for="destino">Cidade destino</label><input type="text" class="form-control" placeholder="Cidade origem" required /></div>
+
+
+                                     <div class="form-group"><label for="peso">Insira o Peso (em KG)</label><input type="text" class="form-control" placeholder="Insira o Peso (em KG)" required /></div>
+
+
+                                     <div class="form-group"><label for="tipo">Tipo de Carga</label><input type="text" class="form-control" placeholder="Tipo de Carga" required /></div>
+
+
+                                     <div class="form-group"><label for="valor">Valor da nota fiscal</label><input type="text" class="form-control" placeholder="R$ 0,00" required /></div>
+
+
+                                    <div class="form-group">
+                                            <input type="submit" class="btn btn-primary btn-block" value='Enviar'>
+                                    </div>
+
+                            </form>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                            <p>
+                                Não transportamos para pessoas físicas, mudanças e cargas fracionadas.<br />
+                                Se sua empresa tem muitos fluxo e precisa de um atendimento mais personalizado, entre em contato 11 4755-8311 e agende uma visita.
+                            </p>
+
+                            <div class="icons" id="atendimento">
+                                <div class="icon"><img src="<?php echo URL; ?>/assets/svg/atendimento.svg" alt=""></div>
+                                <h2>Atendimento Personalizado</h2>
+                                <div style="clear:both"></div>
+                            </div>
+
+                            <div class="icons" id="reducao">
+                                <div class="icon"><img src="<?php echo URL; ?>/assets/svg/reducao-custos.svg" alt=""></div>
+                                <h2>Redução de Custos</h2>
+                                <div style="clear:both"></div>
+                            </div>
+
+                            <div class="icons" id="gerenciamento">
+                                <div class="icon"><img src="<?php echo URL; ?>/assets/svg/gerenciamento.svg" alt=""></div>
+                                <h2>Gerenciamento de Risco</h2>
+                                <div style="clear:both"></div>
+                            </div>
+
+                            <div class="icons" id="pontualidade">
+                                <div class="icon"><img src="<?php echo URL; ?>/assets/svg/pontualidade.svg" alt=""></div>
+                                <h2>Pontualide</h2>
+                                <div style="clear:both"></div>
+                            </div>
+
+                    </div>
+                </div>
+            </article>
+        </div>
+        <article class="container" id="ultimos-servicos">
+            <h1 class="title text-center text-uppercase">Últimos Serviços</h1>
+                <div class="row">
+                    <ul id="da-thumbs" class="da-thumbs">
+                        <li>
+                            <a href="#">
+                                <img src="<?php echo URL; ?>assets/images/servicos-01.jpg" />
+                                <div class="mais"><span></span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="<?php echo URL; ?>assets/images/servicos-02.jpg" />
+                                <div class="mais"><span></span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="<?php echo URL; ?>assets/images/servicos-03.jpg" />
+                                <div class="mais"><span></span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="<?php echo URL; ?>assets/images/servicos-01.jpg" />
+                                <div class="mais"><span></span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="<?php echo URL; ?>assets/images/servicos-02.jpg" />
+                                <div class="mais"><span></span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="<?php echo URL; ?>assets/images/servicos-03.jpg" />
+                                <div class="mais"><span></span></div>
+                            </a>
+                        </li>
+                        <div class="clear-fix"></div>
+                    </ul>
+        </article>
+        <div class="container-fluid" id='newsletter'>
+            <section class="container">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-4 col-lg-offset-4">
+                        <h1 class='text-uppercase text-right' id="t-yellow">Quér ser manter informado com as novidades e notícias do mundo do transporte de cargas?</h1>
+                        <p class="text-right white">Assine gratís e receba semanalmente direto no seu e-mail.</p>
+
+                        <form class="form-inline">
+                              <div class="form-group">
+                                <label class="sr-only" for="name">Nome</label>
+                                <input type="text"  name="name" class="form-control" id="name" placeholder="Seu Nome">
+                              </div>
+                              <div class="form-group">
+                                <label class="sr-only" for="eml">E-mail</label>
+                                <input type="email" name="email" class="form-control" id="eml" placeholder="email@email.com.br">
+                              </div>
+                        </form>
+                    </div>
+            </section>
+        </div>
+
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="<?php echo URL;  ?>assets/js/wow.min.js"></script>
+        <script src="<?php echo URL; ?>assets/js/jquery.hoverdir.js"></script>
+        <script>
+
+                $(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+
+        </script>
     </body>
 </html>
