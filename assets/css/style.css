@@ -235,8 +235,105 @@ body{
     font-size: 1.5em;
     font-weight: bold;
     color:#fdc500;
+    padding-top: 30px
 }
 
 .white{
     color: white;
+}
+
+.ipt{
+    width: 100%!important;
+}
+
+#submit-news{
+    margin-top:  20px;
+}
+
+#telefone{
+    width: 320px;
+    margin: 25px auto;
+}
+
+#numero{
+    margin: 12px 0px 0px ;
+    padding-top: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#emailCont{
+    font-size: 1em;
+    margin: 0px;
+    padding-top: 0px;
+}
+
+#icoFone{
+    width: 72px;
+    height: 72px;
+    float: left;
+}
+
+#icoFone img{
+    max-width: 100%;
+}
+
+.b-white{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+footer{
+    background: #d1d1d1;
+    padding: 20px 0px;
+}
+
+.box-menu{
+    width: 280px;
+}
+
+.menusRdp{
+    width: 140px;
+}
+
+.menusRdp > a{
+    color: #000;
+    display: block;
+}
+
+
+.menusRdp > a:hover{
+    text-decoration: none;
+}
+
+.border-top{
+    padding-top: 8px;
+    border-top:  2px solid white;
+}
+
+.tel-rdp{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 100%;
+    margin-bottom: 0px;
+}
+
+#face{
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+}
+
+#face > img {
+    max-width: 100%;
+}
+
+.t-rdp{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+}
+
+
+.blue{
+    padding: 20px 0px 20px;
+    background: #003164;
 }

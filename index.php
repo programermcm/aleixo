@@ -3,6 +3,7 @@
 <html>
     <head>
         <title>Aleixo Transporte</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Open+Sans:400,400i,700" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo URL; ?>/assets/css/animate.css">
         <link rel="stylesheet" href="<?php echo URL; ?>/assets/css/bootstrap.css">
         <link rel="stylesheet" href="<?php echo URL; ?>/assets/css/style.css">
@@ -216,7 +217,7 @@
                 </div>
             </article>
         </div>
-        <article class="container" id="ultimos-servicos">
+        <article class="container b-white" id="ultimos-servicos">
             <h1 class="title text-center text-uppercase">Últimos Serviços</h1>
                 <div class="row">
                     <ul id="da-thumbs" class="da-thumbs">
@@ -262,23 +263,87 @@
         <div class="container-fluid" id='newsletter'>
             <section class="container">
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-4 col-lg-offset-4">
-                        <h1 class='text-uppercase text-right' id="t-yellow">Quér ser manter informado com as novidades e notícias do mundo do transporte de cargas?</h1>
+                        <h1 class='text-uppercase text-right' id="t-yellow">Quer ser manter informado com as novidades e notícias do mundo do transporte de cargas?</h1>
                         <p class="text-right white">Assine gratís e receba semanalmente direto no seu e-mail.</p>
-
-                        <form class="form-inline">
-                              <div class="form-group">
-                                <label class="sr-only" for="name">Nome</label>
-                                <input type="text"  name="name" class="form-control" id="name" placeholder="Seu Nome">
-                              </div>
-                              <div class="form-group">
-                                <label class="sr-only" for="eml">E-mail</label>
-                                <input type="email" name="email" class="form-control" id="eml" placeholder="email@email.com.br">
-                              </div>
-                        </form>
+                        <div class="row">
+                                <form class="form-inline pull-right col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+                                    <div class="row">
+                                         <div class="form-group input-group-lg col-md-6">
+                                            <label class="sr-only" for="name">Nome</label>
+                                            <input type="text"  name="name" class="form-control ipt" id="name" placeholder="Seu Nome">
+                                          </div>
+                                          <div class="form-group input-group-lg col-md-6">
+                                            <label class="sr-only" for="eml">E-mail</label>
+                                            <input type="email" name="email" class="form-control ipt" id="eml" placeholder="email@email.com.br">
+                                          </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <input type="submit" id="submit-news" value="Enviar" class="btn btn-primary btn-lg pull-right">
+                                        </div>
+                                    </div>
+                                </form>
+                        </div>
                     </div>
             </section>
         </div>
 
+        <section class="container b-white">
+                <h1 class="title text-uppercase text-center">Entre em Contato</h1>
+                <div id="telefone">
+                    <div id="icoFone"><img src="<?php echo URL;  ?>/assets/svg/contato.svg" alt=""></div>
+                    <div class="pull-left">
+                            <h2 id="numero" class="text-center">
+                                11 4755-8311
+                            </h2>
+                            <h2 id="emailCont">contato@aleixotransportes.com.br</h2>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+        </section>
+
+        <footer class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="blocks-footer col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <h2 class="text-uppercase t-rdp">Menu</h2>
+                             <div class="box-menu border-top">
+                                    <div class="menusRdp pull-left">
+                                            <a href="" title="Home">Home</a>
+                                            <a href="" title="Empresa">Empresa</a>
+                                            <a href="" title="Orçamento">Orçamento</a>
+                                    </div>
+                                     <div class="menusRdp pull-left">
+                                            <a href="" title="Últimos Serviços">Últimos serviços</a>
+                                            <a href="" title="Notícias">Notícias</a>
+                                            <a href="" title="Contato">Contato</a>
+                                     </div>
+                             </div>
+                        </div>
+                        <div class="blocks-footer col-sm-12 col-md-4 col-lg-4">
+                            <h2 class="text-uppercase t-rdp">Entre em Contato</h2>
+                            <div class="box-menu border-top">
+                                <p class="tel-rdp">11 4755-8311</p>
+                                <p class="eml-rdp">contato@aleixotransportes.com.br</p>
+                            </div>
+                        </div>
+                        <div class="blocks-footer col-sm-12 col-md-4 col-lg-4">
+                            <h2 class="text-center text-uppercase t-rdp">Redes Sociais</h2>
+                            <a href="https://facebook.com.br" id="face"><img src="<?php echo URL; ?>assets/svg/face.svg" alt="Facebook" title="Facebook" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" container-fluid blue">
+                    <div class="row">
+                        <div class="container">
+                            <div class="row">
+                                    <span>&copy; 2017 | Aleixo Transportes | Desenvolvido Por My Connect Mídia</span>
+                                    <span>contato@aleixotransportes.com.br | 11 4755-8311</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </footer>
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
@@ -287,9 +352,7 @@
         <script src="<?php echo URL;  ?>assets/js/wow.min.js"></script>
         <script src="<?php echo URL; ?>assets/js/jquery.hoverdir.js"></script>
         <script>
-
                 $(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
-
         </script>
     </body>
 </html>
