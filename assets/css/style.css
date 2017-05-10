@@ -91,11 +91,11 @@ body{
     background: #f1f1f1;
 }
 
-#bloco-video{
+#empresa{
     padding: 35px 0 45px;
 }
 
-#bloco-video > article > div > div > h1{
+#empresa > article > div > div > h1{
     font-size: 2em;
     font-weight: 600;
     color: #1c5eaa;
@@ -103,7 +103,7 @@ body{
     margin-top: 0px;
 }
 
-#bloco-video > article > div > div > p{
+#empresa > article > div > div > p{
     font-size: 1.2em;
     line-height: 200%;
 }

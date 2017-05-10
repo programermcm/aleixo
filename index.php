@@ -41,12 +41,12 @@
                                             <!-- Collect the nav links, forms, and other content for toggling -->
                                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                                 <ul id="menu" class="nav navbar-nav">
-                                                    <li><a href="" title="Home">Home</a></li>
-                                                    <li><a href="" title="Empresa">Empresa</a></li>
-                                                    <li><a href="" title="Orçamento">Orçamento</a></li>
-                                                    <li><a href="" title="Últimos Serviços">Últimos serviços</a></li>
+                                                    <li><a href="#home" title="Home" class="navScroll">Home</a></li>
+                                                    <li><a href="#empresa" title="Empresa" class="navScroll">Empresa</a></li>
+                                                    <li><a href="#orcamento" title="Orçamento" class="navScroll">Orçamento</a></li>
+                                                    <li><a href="#ultimos-servicos" title="Últimos Serviços" class="navScroll">Últimos serviços</a></li>
                                                     <li><a href="" title="Notícias">Notícias</a></li>
-                                                    <li><a href="" title="Contato">Contato</a></li>
+                                                    <li><a href="#contato" title="Contato" class="navScroll">Contato</a></li>
                                                 </ul>
                                             </div><!-- /.navbar-collapse -->
                                           </div><!-- /.container-fluid -->
@@ -56,7 +56,8 @@
                     </div>
             </div>
         </header>
-        <section class="container">
+
+        <section class="container" id="home">
             <div class="row">
                 <h1 class="titleItalic">Precisa transportar e não quer dor de cabeça, sabemos como fazer, descubra como abaixo!</h1>
             </div>
@@ -93,7 +94,7 @@
             </div>
         </section>
 
-        <div class="container-fluid bg-gray" id="bloco-video">
+        <div class="container-fluid bg-gray" id="empresa">
             <article class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -288,7 +289,7 @@
             </section>
         </div>
 
-        <section class="container b-white">
+        <section class="container b-white" id="contato">
                 <h1 class="title text-uppercase text-center">Entre em Contato</h1>
                 <div id="telefone">
                     <div id="icoFone"><img src="<?php echo URL;  ?>/assets/svg/contato.svg" alt=""></div>
@@ -309,14 +310,14 @@
                             <h2 class="text-uppercase t-rdp">Menu</h2>
                              <div class="box-menu border-top">
                                     <div class="menusRdp pull-left">
-                                            <a href="" title="Home">Home</a>
-                                            <a href="" title="Empresa">Empresa</a>
-                                            <a href="" title="Orçamento">Orçamento</a>
+                                            <a href="#home" title="Home" class="navScroll">Home</a>
+                                            <a href="#empresa" title="Empresa" class="navScroll">Empresa</a>
+                                            <a href="#orcamento" title="Orçamento" class="navScroll">Orçamento</a>
                                     </div>
                                      <div class="menusRdp pull-left">
                                             <a href="" title="Últimos Serviços">Últimos serviços</a>
-                                            <a href="" title="Notícias">Notícias</a>
-                                            <a href="" title="Contato">Contato</a>
+                                            <a href="#noticias" title="Notícias" class="navScroll">Notícias</a>
+                                            <a href="#contato" title="Contato" class="navScroll">Contato</a>
                                      </div>
                              </div>
                         </div>
@@ -333,26 +334,32 @@
                         </div>
                     </div>
                 </div>
-                <div class=" container-fluid blue">
+        </footer>
+        <div class=" container-fluid blue">
+               <div class="container">
                     <div class="row">
-                        <div class="container">
-                            <div class="row">
-                                    <span>&copy; 2017 | Aleixo Transportes | Desenvolvido Por My Connect Mídia</span>
-                                    <span>contato@aleixotransportes.com.br | 11 4755-8311</span>
-                            </div>
-                        </div>
+                            <span class="white pull-left">&copy; 2017 | Aleixo Transportes | Desenvolvido Por <a class="white mcm" href="http://myconnect.com.br">My Connect Mídia</a> </span>
+                            <span class="white pull-right">contato@aleixotransportes.com.br | 11 4755-8311</span>
                     </div>
                 </div>
-        </footer>
+        </div>
 
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+        <script src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/TweenMax-latest-beta.js?v=corn"></script>
+        <script src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin-latest-beta.js?v=corn"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="<?php echo URL;  ?>assets/js/wow.min.js"></script>
         <script src="<?php echo URL; ?>assets/js/jquery.hoverdir.js"></script>
         <script>
                 $(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+
+            $(function($){
+                    $('.navScroll').on('click',function(){
+                            var ancora = $(this).attr("href");
+                            console.log(ancora);
+                            TweenLite.to(window, 1, {scrollTo:{y:ancora, offsetY:150}});
+                    });
+            });
+
+
         </script>
     </body>
 </html>
