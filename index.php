@@ -8,8 +8,54 @@
         <link rel="stylesheet" href="<?php echo URL; ?>/assets/css/bootstrap.css">
         <link rel="stylesheet" href="<?php echo URL; ?>/assets/css/style.css">
         <script src="<?php echo URL; ?>assets/js/modernizr.custom.97074.js"></script>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     </head>
-    <body>
+    <body  data-spy="scroll" data-target=".navbar" data-offset="153">
+    <div id="home">
+            <div class="container-fluid"  id="topoFixed">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                    <h1 class="font-0">
+                                            Aleixo Transportes
+                                            <a href=""><img src="<?php echo URL;  ?>assets/svg/logo02.svg" alt="Aleixo Transportes" title="Aleixo Transportes" id="logo2" /></a>
+                                    </h1>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                        <nav id="caixaBtn"class="navbar navbar-default">
+                                            <h1 class="font-0">
+                                               Aleixo Transportes
+                                            </h1>
+                                          <div class="container-fluid">
+                                            <!-- Brand and toggle get grouped for better mobile display -->
+                                            <div class="navbar-header">
+                                              <button type="button" id="btnMenu1" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                              </button>
+                                            </div>
+                                            <!-- Collect the nav links, forms, and other content for toggling -->
+                                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                                <ul id="menu1" class="nav navbar-nav">
+                                                    <li><a href="#home" title="Home" class="navScroll">Home</a></li>
+                                                    <li><a href="#empresa" title="Empresa" class="navScroll">Empresa</a></li>
+                                                    <li><a href="#orcamento" title="Orçamento" class="navScroll">Orçamento</a></li>
+                                                    <li><a href="#ultimos-servicos" title="Últimos Serviços" class="navScroll">Últimos serviços</a></li>
+                                                    <li><a href="" title="Notícias">Notícias</a></li>
+                                                    <li><a href="#contato" title="Contato" class="navScroll">Contato</a></li>
+                                                </ul>
+                                            </div><!-- /.navbar-collapse -->
+                                          </div><!-- /.container-fluid -->
+                                        </nav>
+                                </div>
+                        </div>
+                    </div>
+        </div>
+
+
+        <div id="top"></div>
          <h1 class="font-0">
                         Aleixo Transportes
         </h1>
@@ -31,7 +77,7 @@
                                           <div class="container-fluid">
                                             <!-- Brand and toggle get grouped for better mobile display -->
                                             <div class="navbar-header">
-                                              <button type="button" id="btnMenu" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                              <button type="button" id="btnMenu2" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                                                 <span class="sr-only">Toggle navigation</span>
                                                 <span class="icon-bar"></span>
                                                 <span class="icon-bar"></span>
@@ -40,7 +86,7 @@
                                             </div>
                                             <!-- Collect the nav links, forms, and other content for toggling -->
                                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                                <ul id="menu" class="nav navbar-nav">
+                                                <ul id="menu2" class="nav navbar-nav">
                                                     <li><a href="#home" title="Home" class="navScroll">Home</a></li>
                                                     <li><a href="#empresa" title="Empresa" class="navScroll">Empresa</a></li>
                                                     <li><a href="#orcamento" title="Orçamento" class="navScroll">Orçamento</a></li>
@@ -57,7 +103,7 @@
             </div>
         </header>
 
-        <section class="container" id="home">
+        <section class="container" id="miolo-home">
             <div class="row">
                 <h1 class="titleItalic">Precisa transportar e não quer dor de cabeça, sabemos como fazer, descubra como abaixo!</h1>
             </div>
@@ -93,6 +139,7 @@
                 </aside>
             </div>
         </section>
+    </div>
 
         <div class="container-fluid bg-gray" id="empresa">
             <article class="container">
@@ -343,23 +390,40 @@
                     </div>
                 </div>
         </div>
-
-        <script src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/TweenMax-latest-beta.js?v=corn"></script>
-        <script src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin-latest-beta.js?v=corn"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="<?php echo URL; ?>assets/js/bootstrap.min.js"></script>
         <script src="<?php echo URL; ?>assets/js/jquery.hoverdir.js"></script>
         <script>
-                $(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+                $(' #da-thumbs > li ').each( function(){ $(this).hoverdir(); } );
 
-            $(function($){
-                    $('.navScroll').on('click',function(){
-                            var ancora = $(this).attr("href");
-                            console.log(ancora);
-                            TweenLite.to(window, 1, {scrollTo:{y:ancora, offsetY:150}});
-                    });
+                $('a[href^="#"]').on('click', function(event) {
+                    var target = $( $(this).attr('href') );
+                    var title = $(this).attr('title') + " - Aleixo Transportes";
+                    document.title = title
+                    if( target.length ) {
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top-153
+                        }, 500);
+                    }
+                });
+
+
+            $(window).scroll(function (event) {
+                var scroll = $(window).scrollTop();
+                // Do something
+
+                if(scroll > 209){
+                    $("#topoFixed").fadeIn();
+                }else{
+                    $("#topoFixed").fadeOut();
+                }
+
+
+                console.log(scroll);
             });
 
-
         </script>
+
     </body>
 </html>

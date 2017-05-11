@@ -20,6 +20,22 @@ body{
     height: 780px;
 }
 
+
+#topoFixed{
+    position: fixed;
+    top: 0px;
+    z-index:  999;
+    width: 100%;
+    background: #003777;
+    display: none;
+    border-top:  solid 10px #0051ad;
+}
+
+#logo2{
+    width: 200px;
+    height: 150px;
+}
+
 #logo{
     width: 210px;
     height: 195px;
@@ -42,8 +58,23 @@ body{
     border-bottom: solid 2px transparent;
 }
 
+.navbar-default .navbar-nav > li > a:active,
+.navbar-default .navbar-nav > li > a:hover{
+    background: transparent!important;
+    transition: .2s linear!important;
+    color:  #fff!important;
+    border-bottom: solid 2px #fff!important
+}
 
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav > li.active > a {
+    background: transparent!important;
+    transition: .2s linear!important;
+    color:  #fff!important;
+    border-bottom: solid 2px #fff!important
+}
+
+.navbar-default .navbar-nav > li.active > a:hover{
+    background: transparent;
     transition: .2s linear;
     color:  #fff;
     border-bottom: solid 2px #fff
@@ -336,4 +367,10 @@ footer{
 .blue{
     padding: 20px 0px 20px;
     background: #003164;
+}
+
+#animate{
+    position:  fixed;
+    top:  0px;
+    opacity: 0;
 }
