@@ -10,7 +10,7 @@
         <script src="<?php echo URL; ?>assets/js/modernizr.custom.97074.js"></script>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     </head>
-    <body  data-spy="scroll" data-target=".navbar" data-offset="153">
+    <body  data-spy="scroll" data-target=".navbar" data-offset="80">
     <div id="home">
             <div class="container-fluid"  id="topoFixed">
                 <div class="container">
@@ -18,11 +18,11 @@
                                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                                     <h1 class="font-0">
                                             Aleixo Transportes
-                                            <a href=""><img src="<?php echo URL;  ?>assets/svg/logo02.svg" alt="Aleixo Transportes" title="Aleixo Transportes" id="logo2" /></a>
+                                            <a href="#home" title="Home"><img src="<?php echo URL;  ?>assets/svg/logo02.svg" alt="Aleixo Transportes" title="Aleixo Transportes" id="logo2" /></a>
                                     </h1>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                        <nav id="caixaBtn"class="navbar navbar-default">
+                                        <nav id="caixaBtn2"class="navbar navbar-default">
                                             <h1 class="font-0">
                                                Aleixo Transportes
                                             </h1>
@@ -66,7 +66,7 @@
                                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                                     <h1 class="font-0">
                                             Aleixo Transportes
-                                            <a href=""><img src="<?php echo URL;  ?>assets/svg/logo.svg" alt="Aleixo Transportes" title="Aleixo Transportes" id="logo" /></a>
+                                            <a href="#home" title="Home"><img src="<?php echo URL;  ?>assets/svg/logo.svg" alt="Aleixo Transportes" title="Aleixo Transportes" id="logo" /></a>
                                     </h1>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
@@ -362,7 +362,7 @@
                                             <a href="#orcamento" title="Orçamento" class="navScroll">Orçamento</a>
                                     </div>
                                      <div class="menusRdp pull-left">
-                                            <a href="" title="Últimos Serviços">Últimos serviços</a>
+                                            <a href="#ultimos-servicos" title="Últimos Serviços">Últimos serviços</a>
                                             <a href="#noticias" title="Notícias" class="navScroll">Notícias</a>
                                             <a href="#contato" title="Contato" class="navScroll">Contato</a>
                                      </div>
@@ -403,7 +403,7 @@
                     if( target.length ) {
                         event.preventDefault();
                         $('html, body').animate({
-                            scrollTop: target.offset().top-153
+                            scrollTop: target.offset().top-80
                         }, 500);
                     }
                 });
