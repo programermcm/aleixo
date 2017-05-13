@@ -15,13 +15,13 @@
             <div class="container-fluid"  id="topoFixed">
                 <div class="container">
                         <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <div class="col-xs-8 col-sm-8 col-md-4 col-lg-4">
                                     <h1 class="font-0">
                                             Aleixo Transportes
                                             <a href="#home" title="Home"><img src="<?php echo URL;  ?>assets/svg/logo02.svg" alt="Aleixo Transportes" title="Aleixo Transportes" id="logo2" /></a>
                                     </h1>
                                 </div>
-                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                <div class="col-xs-4 col-sm-4 col-md-8 col-lg-8">
                                         <nav id="caixaBtn2"class="navbar navbar-default">
                                             <h1 class="font-0">
                                                Aleixo Transportes
@@ -77,7 +77,7 @@
                                           <div class="container-fluid">
                                             <!-- Brand and toggle get grouped for better mobile display -->
                                             <div class="navbar-header">
-                                              <button type="button" id="btnMenu2" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                              <button type="button" id="btnMenu2" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
                                                 <span class="sr-only">Toggle navigation</span>
                                                 <span class="icon-bar"></span>
                                                 <span class="icon-bar"></span>
@@ -85,7 +85,7 @@
                                               </button>
                                             </div>
                                             <!-- Collect the nav links, forms, and other content for toggling -->
-                                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                                                 <ul id="menu2" class="nav navbar-nav">
                                                     <li><a href="#home" title="Home" class="navScroll">Home</a></li>
                                                     <li><a href="#empresa" title="Empresa" class="navScroll">Empresa</a></li>
@@ -158,7 +158,7 @@
                         </p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <img src="<?php echo URL ;?>/assets/images/video.png" alt="" title="" />
+                            <img src="<?php echo URL ;?>/assets/images/video.png" alt="" title="" id="vd" />
                     </div>
                 </div>
             </article>
@@ -393,35 +393,45 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="<?php echo URL; ?>assets/js/bootstrap.min.js"></script>
         <script src="<?php echo URL; ?>assets/js/jquery.hoverdir.js"></script>
+        <script src="<?php echo URL; ?>assets/js/mobile.detect.js"></script>
         <script>
-                $(' #da-thumbs > li ').each( function(){ $(this).hoverdir(); } );
-
-                $('a[href^="#"]').on('click', function(event) {
-                    var target = $( $(this).attr('href') );
-                    var title = $(this).attr('title') + " - Aleixo Transportes";
-                    document.title = title
-                    if( target.length ) {
-                        event.preventDefault();
-                        $('html, body').animate({
-                            scrollTop: target.offset().top-80
-                        }, 500);
-                    }
-                });
 
 
-            $(window).scroll(function (event) {
-                var scroll = $(window).scrollTop();
-                // Do something
 
-                if(scroll > 209){
-                    $("#topoFixed").fadeIn();
-                }else{
-                    $("#topoFixed").fadeOut();
-                }
+          if( jQuery.browser.mobile ){
 
+            $("#topoFixed").css({"display":"block"});
+            $("#header").css({"display":"none"});
 
-                console.log(scroll);
-            });
+            console.log('test mobile');
+
+            }else{
+                        $(' #da-thumbs > li ').each( function(){ $(this).hoverdir(); } );
+
+                        $('a[href^="#"]').on('click', function(event) {
+                            var target = $( $(this).attr('href') );
+                            var title = $(this).attr('title') + " - Aleixo Transportes";
+                            document.title = title
+                            if( target.length ) {
+                                event.preventDefault();
+                                $('html, body').animate({
+                                    scrollTop: target.offset().top-80
+                                }, 500);
+                            }
+                        });
+
+                        $(window).scroll(function (event) {
+                            var scroll = $(window).scrollTop();
+                            // Do something
+
+                            if(scroll > 209){
+                                $("#topoFixed").fadeIn();
+                            }else{
+                                $("#topoFixed").fadeOut();
+                            }
+                            console.log(scroll);
+                        });
+            }
 
         </script>
 

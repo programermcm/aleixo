@@ -378,3 +378,7 @@ footer{
     top:  0px;
     opacity: 0;
 }
+
+#vd{
+    max-width: 100%;
+}
